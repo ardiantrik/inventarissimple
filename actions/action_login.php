@@ -2,13 +2,13 @@
 
 include "../koneksi.php";
 if ($_GET['aksi'] == "login") {
-    $username = $_POST['username'];
-    $pass = $_POST['password'];
-
+    $username = mysqli_real_escape_string($koneksi, $_POST['username']);
+    $pass = mysqli_real_escape_string($koneksi, $_POST['password']);
+    
     $login = mysqli_query($koneksi, "SELECT * FROM users WHERE username='$username' AND password='$pass'");
     $ketemu = mysqli_num_rows($login);
     $r = mysqli_fetch_array($login);
-
+    
     if ($ketemu > 0) {
 
         session_start();

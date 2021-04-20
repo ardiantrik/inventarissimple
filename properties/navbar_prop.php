@@ -1,7 +1,7 @@
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
-      <a href="resource/index3.html" class="navbar-brand">
+      <a href="#" class="navbar-brand">
         <img src="resource/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">Manajemen Inventaris</span>
       </a>
@@ -16,8 +16,13 @@
           <li class="nav-item">
             <a href="home.php" class="nav-link">Home</a>
           </li>
-          <li class="nav-item">
-            <a href="data.php" class="nav-link">Data</a>
+
+          <li class="nav-item dropdown">
+            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Data</a>
+            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+              <li><a href="data.php" class="dropdown-item">Data Arsip</a></li>
+              <li><a href="#" class="dropdown-item">Data Sekolah</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a href="users.php" class="nav-link">Akun</a>

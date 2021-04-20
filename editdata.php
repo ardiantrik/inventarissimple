@@ -131,13 +131,9 @@
                         <input type="hidden" name="id" value="<?php echo $id?>">
                         <input type="submit" class="btn btn-primary" value="Simpan">
                     </div>
-                </form>
-
-                
+                </form>    
             </div>
             <!-- /.card -->
-
-   
           </div>
           <!-- /.col-md -->
         </div>

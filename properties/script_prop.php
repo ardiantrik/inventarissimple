@@ -29,6 +29,14 @@
 <script src="resource/plugins/toastr/toastr.min.js"></script>
 <!-- Page specific script -->
 <script>
+    function cekPass() {
+        var x = document.getElementById("passInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
     $(document).ready(function() {
         // $('#tabelskp').DataTable();
         $('.select2').select2();
@@ -36,12 +44,17 @@
             theme: 'bootstrap4'
         });
         $("#alltable").DataTable({
+            // "dom": '<"top"lf>rt<"bottom"ip><"clear">',
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Semua"]],
+            // "scrollY": 200,
+            "scrollX": true,
+            "scroller": true,
             "paging": true,
-            "lengthChange": false,
+            "lengthChange": true,
             "searching": true,
             "ordering": true,
             "info": true,
-            "autoWidth": false,
+            "autoWidth": true,
             "responsive": true,
             "language": {
                 "search": "Cari:"
@@ -58,13 +71,37 @@
             "buttons": [
                 {
                     extend: 'excelHtml5',
-                    text: 'Download Excel',
+                    text: '<i class="fas fa-download"></i>&nbsp;Download Excel',
                     exportOptions: {
                         columns: [ 0, 1, 2, 3, 4, 5, 6, 7 ]
                     }
                 }]
-        }).buttons().container().appendTo('#alltable_wrapper .col-md-6:eq(0)');
+            }).buttons().container().appendTo('#alltable_wrapper .col-md-6:eq(0)');
+            $("#userstable").DataTable({
+            // "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Semua"]],
+            "pageLength": 3,
+            "scrollX": true,
+            "paging": true,
+            "lengthChange": false,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+            "language": {
+                "search": "Cari:"
+            },
+            "oLanguage": {
+                "sZeroRecords": "Tidak ada data",
+                "sEmptyTable": "Tidak ada data",
+                "sInfo": "Menampilkan total _TOTAL_ data (_START_ s/d _END_)",
+                "sInfoFiltered": " - disaring dari _MAX_ data",
+                "sInfoEmpty": "Tidak ada data"
+            }
+        });
     } );
+        
+    
 
 
 </script>

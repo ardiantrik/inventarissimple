@@ -31,4 +31,21 @@ include 'koneksi.php';
     <link rel="stylesheet" href="resource/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Toastr -->
     <link rel="stylesheet" href="resource/plugins/toastr/toastr.min.css">
+    <style>
+      div.dt-buttons{
+        position:relative;
+        float:left;
+        display: inline-block;
+      }
+      div.dt-t{
+        position:relative;
+        overflow-x: auto;
+      }
+      div#alltable {
+        align: center;
+        /* width: 1220px; */
+        margin: 0 auto;
+        /* overflow-x: auto; */
+      }
+    </style>
 </head>

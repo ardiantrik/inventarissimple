@@ -27,15 +27,23 @@
 
     <!-- Main content -->
     <div class="content">
-      <div class="container">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-md">
+                    <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#modal-formtambah">
+                        <i class="fas fa-plus"></i>&nbsp;Tambah Data
+                    </button>
+                    <?php include('properties/alert_prop.php'); ?>
+                    
+                </div>
+            </div>
+        </div>
+      <div class="container-xl mx-auto">
         <div class="row">
           <div class="col-md">
-            <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#modal-formtambah">
-                <i class="fas fa-plus"></i>&nbsp;Tambah Data
-            </button>
-            <?php include('properties/alert_prop.php'); ?>
-            <hr>
-            <table id="alltable" class="table table-bordered table-striped text-center table-responsive" style="width:100%">
+          <hr>
+          <div class="table-responsive-xl">
+            <table id="alltable" class="table table-bordered table-striped text-center" style="width:100%" >
                     <thead class="thead-dark">
                         <tr>
                             <th>No.</th>
@@ -76,6 +84,7 @@
 
                     </tbody>
                 </table>
+                </div>
 
 
 
